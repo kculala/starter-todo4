@@ -17,7 +17,7 @@ class TaskListTest extends TestCase {
 
     public function testUncompletedTasksGreaterThanCompleted() {
         $numOfUncompleted = 0;
-        $tasks = $this->CI->tasks->all();
+        $tasks = (new Tasks()) -> all();
 
         foreach ($tasks as $task) {
             if ($task->status != 2) {
