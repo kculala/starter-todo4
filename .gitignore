@@ -21,4 +21,4 @@ application/logs/*
 tmp/*
 
 #code coverage report
-tests/coverage
+tests/report

@@ -15,7 +15,7 @@
     bootstrap="tests/Bootstrap.php">
     <testsuites>
         <testsuite name="CITools Test Suite">
-            <directory>./application/</directory>
+            <directory>./tests/</directory>
         </testsuite>
     </testsuites>
     <logging>
@@ -26,7 +26,7 @@
     </logging>
     <filter>
         <whitelist>
-            <directory>./system/</directory>
+            <directory>./application/</directory>
         </whitelist>
     </filter>
 </phpunit>
