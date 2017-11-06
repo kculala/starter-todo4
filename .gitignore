@@ -19,3 +19,6 @@ application/logs/*
 /nbproject/
 
 tmp/*
+
+#code coverage report
+tests/report
