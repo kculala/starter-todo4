@@ -84,7 +84,7 @@ defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
-defined('DATAPATH')            OR define('DATAPATH', '../data/tasks.csv');
+defined('DATAPATH')            OR define('DATAPATH', '../data/tasks.xml');
 
 defined('ROLE_GUEST') OR define('ROLE_GUEST', 'Guest');
 defined('ROLE_OWNER') OR define('ROLE_OWNER', 'Owner');
