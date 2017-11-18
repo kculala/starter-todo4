@@ -87,6 +87,27 @@ class XML_Model extends Memory_Model
         $this->reindex();
         //---------------------
         // --------------------
+        if (($data = simplexml_load_file($this->_origin)) !== FALSE)
+        {
+            $updated_data = new SimpleXMLElement('<tasks></tasks>');
+
+            foreach($this->_data as $key => $record)
+            {
+                $task = $updated_data->addChild('task');
+
+                foreach($record as $field => $value)
+                {
+                    $task->addChild($field, htmlspecialchars($value));
+                }
+            }
+        }
+
+        $dom = new DOMDocument('1.0', 'UTF-8');
+        $dom->preserveWhiteSpace = true;
+        $dom->formatOutput = true;
+
+        $dom->loadXml($updated_data->asXML());
+        $dom->save($this->_origin);
     }
 
 }
